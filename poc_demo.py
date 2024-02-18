@@ -13,22 +13,22 @@ freq = pd.read_csv('test_data/post_frequency.csv')
 
 corpus = Corpus(freq=freq)
 dvr = corpus.create_dvr()
-print(dvr)
+# print(dvr)
 
-# epsilon_frac = 2
-# epsilon = 1 / (len(dvr) * epsilon_frac)
-# # print(epsilon)
+epsilon_frac = 2
+epsilon = 1 / (len(dvr) * epsilon_frac)
+# print(epsilon)
 
-# signatures = corpus.create_signatures(epsilon=epsilon, sig_length=500, distance="KLDe")
-# # print(signatures[0].head(10))
+signatures = corpus.create_signatures(epsilon=epsilon, sig_length=500, distance="KLDe")
+# print(signatures[0].head(10))
 
-# pd.DataFrame(
-#     [sig.sum() for sig in signatures], index=corpus.document_cat.categories
-# ).plot.hist()
-# # pd.DataFrame([sig.sum() for sig in signatures])
+pd.DataFrame(
+    [sig.sum() for sig in signatures], index=corpus.document_cat.categories
+).plot.hist()
+pd.DataFrame([sig.sum() for sig in signatures])
 
-# spd = sockpuppet_distance(corpus, corpus)
-# # print(spd.head())
+spd = sockpuppet_distance(corpus, corpus)
+# print(spd.head())
 
 # sockpuppet_matrix(spd)
 

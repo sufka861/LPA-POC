@@ -32,8 +32,8 @@ for text in df['text']:
 
 # Select the top n most frequent words
 n = 10
-top_100_words = word_counts.most_common(n)
-top_words_set = set(word for word, _ in top_100_words)
+top_words = word_counts.most_common(n)
+top_words_set = set(word for word, _ in top_words)
 
 # Select only the required columns
 df_selected = df[['id', 'text']]

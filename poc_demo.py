@@ -28,7 +28,7 @@ pd.DataFrame(
 pd.DataFrame([sig.sum() for sig in signatures])
 
 spd = sockpuppet_distance(corpus, corpus)
-# print(spd.head())
+print(spd)
 
 # sockpuppet_matrix(spd)
 

@@ -64,3 +64,5 @@ def plot_pca(data, labels):
     chart = alt.Chart(data).mark_circle().encode(x="x", y="y", tooltip=["label"])
     text = chart.mark_text(align="left", baseline="middle", dx=7).encode(text="label")
     return chart + text
+
+

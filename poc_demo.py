@@ -1,8 +1,8 @@
 import altair as alt
 import pandas as pd
 import logging
-
 from LPA import PCA, Corpus, sockpuppet_distance
+
 
 def main():
     logging.basicConfig(filename='progress_log.txt', level=logging.INFO, 
@@ -34,7 +34,7 @@ def main():
     spd = sockpuppet_distance(corpus, corpus)
     logging.info(f"Sockpuppet distance calculated {spd}")
     filtered_spd = spd[spd['value'] > 0].sort_values(by='value', ascending=True)
-    
+    # print(spd)
     print(filtered_spd)
     num_rows = filtered_spd.shape[0]  
     print(f"Number of rows in the filtered DataFrame: {num_rows}")

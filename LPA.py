@@ -1,9 +1,7 @@
 from __future__ import annotations
-
 from importlib import import_module
 from pathlib import Path
 from typing import List, Tuple
-
 from scipy.spatial.distance import cdist
 from sklearn import decomposition as skd
 from sklearn.preprocessing import StandardScaler
@@ -252,15 +250,79 @@ class Corpus:
 
 
 
-def calculate_block_distance(block, matrix2, metric="cityblock"):
-    return cdist(block, matrix2, metric=metric)
+# def calculate_block_distance(block, matrix2, metric="cityblock"):
+#     return cdist(block, matrix2, metric=metric)
+
+# def sockpuppet_distance(
+#     corpus1,
+#     corpus2,
+#     res: Literal["table", "matrix"] = "table",
+#     heuristic: bool = True,
+#     threshold = 0.02
+# ):
+#     # Preprocess matrices
+#     matrices = []
+#     for corpus in [corpus1, corpus2]:
+#         matrix = deepcopy(corpus.signature_matrix.matrix)
+#         matrix = matrix[:, ~np.all(matrix == 0, axis=0)]
+#         if heuristic:
+#             matrix[matrix > 0] += 1
+#             matrix[matrix < 0] -= 1
+#         matrices.append(matrix)
+
+#     matrix1, matrix2 = matrices
+#     block_size = 700
+#     total_rows = matrix1.shape[0]
+
+#     # Calculate max value for filtering threshold before normalization
+#     sample_distance = cdist(matrix1[:1], matrix2, metric="cityblock")
+#     max_value = sample_distance.max()
+#     raw_threshold = threshold * max_value
+
+#     cdist_ = np.zeros((total_rows, matrix2.shape[0]))
+    
+#     total_blocks = int(np.ceil(total_rows / block_size))
+#     print(f"Total blocks to process: {total_blocks}")
+
+#     with ProcessPoolExecutor(max_workers=4) as executor:
+#         futures = []
+#         for start_row in range(0, total_rows, block_size):
+#             end_row = min(start_row + block_size, total_rows)
+#             block = matrix1[start_row:end_row]
+#             future = executor.submit(calculate_block_distance, block, matrix2)
+#             futures.append((future, start_row, end_row))
+
+#         for future, start_row, end_row in futures:
+#             block_distances = future.result()
+#             if corpus1 is corpus2:
+#                 # Set diagonal to 0 if comparing the same corpus
+#                 np.fill_diagonal(block_distances[max(0, start_row - end_row):], 0)
+#             block_distances[block_distances > raw_threshold] = np.nan
+#             cdist_[start_row:end_row, :] = block_distances
+
+#     # Normalization
+#     cdist_ /= max_value
+
+#     # Construct DataFrame
+#     c1n = getattr(corpus2, "name", "Corpus 1")
+#     c2n = getattr(corpus1, "name", "Corpus 2")
+#     df = pd.DataFrame(cdist_, index=corpus1.document_cat.categories, columns=corpus2.document_cat.categories)
+
+#     if res == "table":
+#         if c1n == c2n:
+#             c2n = c1n + " "
+#         df = df.rename_axis(index=c1n).melt(ignore_index=False, var_name=c2n).dropna().reset_index()
+#     elif res == "matrix":
+#         df = df.fillna(0) + df.T
+
+#     return df
+
 
 def sockpuppet_distance(
     corpus1,
     corpus2,
     res: Literal["table", "matrix"] = "table",
-    heuristic: bool = True,
-    threshold = 0.02
+    heuristic: bool = True
 ):
     # Preprocess matrices
     matrices = []
@@ -274,40 +336,37 @@ def sockpuppet_distance(
 
     matrix1, matrix2 = matrices
     block_size = 700
+
+    # Initialize distance matrix
     total_rows = matrix1.shape[0]
-
-    # Calculate max value for filtering threshold before normalization
-    sample_distance = cdist(matrix1[:1], matrix2, metric="cityblock")
-    max_value = sample_distance.max()
-    raw_threshold = threshold * max_value
-
     cdist_ = np.zeros((total_rows, matrix2.shape[0]))
-    
-    total_blocks = int(np.ceil(total_rows / block_size))
-    print(f"Total blocks to process: {total_blocks}")
 
+    # Calculate distances in blocks for upper triangle
     with ProcessPoolExecutor(max_workers=4) as executor:
         futures = []
         for start_row in range(0, total_rows, block_size):
             end_row = min(start_row + block_size, total_rows)
-            block = matrix1[start_row:end_row]
-            future = executor.submit(calculate_block_distance, block, matrix2)
-            futures.append((future, start_row, end_row))
+            block1 = matrix1[start_row:end_row]
+            for start_col in range(start_row, matrix2.shape[0], block_size):
+                end_col = min(start_col + block_size, matrix2.shape[0])
+                block2 = matrix2[start_col:end_col]
+                future = executor.submit(calculate_block_distance, block1, block2)
+                futures.append((future, start_row, end_row, start_col, end_col))
 
-        for future, start_row, end_row in futures:
+        for future, start_row, end_row, start_col, end_col in futures:
             block_distances = future.result()
-            if corpus1 is corpus2:
-                # Set diagonal to 0 if comparing the same corpus
-                np.fill_diagonal(block_distances[max(0, start_row - end_row):], 0)
-            block_distances[block_distances > raw_threshold] = np.nan
-            cdist_[start_row:end_row, :] = block_distances
+            cdist_[start_row:end_row, start_col:end_col] = block_distances
 
-    # Normalization
+    # Make the matrix symmetric
+    cdist_ = np.triu(cdist_) + np.triu(cdist_, 1).T
+
+    # Normalize the distance matrix
+    max_value = cdist_.max() if cdist_.max() > 0 else 1  # Prevent division by zero
     cdist_ /= max_value
 
     # Construct DataFrame
-    c1n = getattr(corpus2, "name", "Corpus 1")
-    c2n = getattr(corpus1, "name", "Corpus 2")
+    c1n = getattr(corpus1, "name", "Corpus 1")
+    c2n = getattr(corpus2, "name", "Corpus 2")
     df = pd.DataFrame(cdist_, index=corpus1.document_cat.categories, columns=corpus2.document_cat.categories)
 
     if res == "table":
@@ -315,10 +374,12 @@ def sockpuppet_distance(
             c2n = c1n + " "
         df = df.rename_axis(index=c1n).melt(ignore_index=False, var_name=c2n).dropna().reset_index()
     elif res == "matrix":
-        df = df.fillna(0) + df.T
+        df = df.fillna(0)
 
     return df
 
+def calculate_block_distance(block1, block2):
+    return cdist(block1, block2, metric="cityblock")
 
 def PCA(sockpuppet_matrix, n_components: int = 2):
     """

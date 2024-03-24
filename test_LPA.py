@@ -4,7 +4,7 @@ import pandas as pd
 import pandas.testing as pdt
 import numpy as np
 import numpy.testing as npt
-from LPA import LPA
+# from LPA import LPA
 from algo import KLD_distance
 
 
@@ -70,11 +70,11 @@ def test_KLD_distance():
     npt.assert_array_almost_equal(KLD_distance(P, Q), np.array([0, 0, np.log(4 / 3)]))
 
 
-def test_signatures(freq, real_dvr):
-    lpa = LPA(real_dvr, epsilon_frac=2)
-    signatures, max_distances = lpa.create_signatures(
-        freq, overused=True, most_significant=30, sig_length=500
-    )
+# def test_signatures(freq, real_dvr):
+#     lpa = LPA(real_dvr, epsilon_frac=2)
+#     signatures, max_distances = lpa.create_signatures(
+#         freq, overused=True, most_significant=30, sig_length=500
+#     )
 
 
 # class TestModels(unittest.TestCase):

@@ -1,35 +1,8 @@
-
-from LPA import PCA, Corpus, sockpuppet_distance, prepare_for_visualization
-import logging
-
-
-# # Visualization and summary
-# 
-# hist_data = pd.DataFrame([sig.sum() for sig in signatures], index=corpus.document_cat.categories)
-# hist_data.plot.hist()
-#
-# print(corpus.freq.head(5))
-
-# logging.info("Calculating sockpuppet distance...")
-
-# spd = sockpuppet_distance(corpus, corpus)
-
-# logging.info(f"Sockpuppet distance calculated: {spd}")
-
-# pca, evr = PCA(spd, n_components=2)
-
-# logging.info("PCA completed.")
-# logging.info(f"PCA result: {pca}")
-# logging.info(f"Explained Variance Ratio: {evr}")
-
-# logging.info("Program ended successfully.")
-
-
 import altair as alt
 import pandas as pd
+import logging
 
 from LPA import PCA, Corpus, sockpuppet_distance
-from LPA import sockpuppet_distance, Corpus
 
 def main():
     logging.basicConfig(filename='progress_log.txt', level=logging.INFO, 
@@ -39,6 +12,8 @@ def main():
     
     logging.info("1.Reading frequency data...")
     freq = pd.read_csv('test_data/post_frequency.csv')
+    # freq = pd.read_csv('frequency.csv')
+
     logging.info("  Data loaded successfully.")
     
     logging.info("2. Creating DVR from the corpus...")
@@ -54,16 +29,22 @@ def main():
     signatures = corpus.create_signatures(epsilon=epsilon, sig_length=500, distance="KLDe")
     logging.info("Signatures created.")
 
-    logging.info("Generating histogram...")
-    pd.DataFrame(
-        [sig.sum() for sig in signatures], index=corpus.document_cat.categories
-    ).plot.hist()
-    pd.DataFrame([sig.sum() for sig in signatures])
 
     logging.info("Calculating sockpuppet distance...")
-    spd = sockpuppet_distance(corpus, corpus, res="matrix")
+    spd = sockpuppet_distance(corpus, corpus)
     logging.info(f"Sockpuppet distance calculated {spd}")
+    filtered_spd = spd[spd['value'] > 0].sort_values(by='value', ascending=True)
+    
+    print(filtered_spd)
+    num_rows = filtered_spd.shape[0]  
+    print(f"Number of rows in the filtered DataFrame: {num_rows}")
 
+
+    logging.info("E - N - D")
+    # pd.DataFrame(
+    #     [sig.sum() for sig in signatures], index=corpus.document_cat.categories
+    # ).plot.hist()
+    # pd.DataFrame([sig.sum() for sig in signatures])
     # pca, evr = PCA(spd, n_components=2)
     # # print(plot_pca(pca,spd.inde
 

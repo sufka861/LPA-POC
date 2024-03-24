@@ -6,8 +6,8 @@ from collections import Counter
 df = pd.read_csv('test_data/posts-dataset.csv')
 df_selected = df[['author_id', 'text']]
 
-# Concatenating texts for each author and limiting to the first 100 authors
-concatenated_texts_by_author = df_selected.groupby('author_id')['text'].apply(' '.join)
+# Concatenating texts for each author
+concatenated_texts_by_author = df_selected.groupby('author_id')['text'].apply(' '.join).head(1000)
 # Analyzing word frequency for each author
 word_frequency_data = []
 for author_id, text in concatenated_texts_by_author.items():

@@ -323,3 +323,1091 @@
 2024-03-23 00:11:44,858 INFO:Creating signatures...
 2024-03-23 00:14:06,007 INFO:Signatures created.
 2024-03-23 00:14:08,583 INFO:Calculating sockpuppet distance...
+2024-03-24 04:23:32,853 INFO:1.Reading frequency data...
+2024-03-24 04:23:33,037 INFO:  Data loaded successfully.
+2024-03-24 04:23:33,037 INFO:2. Creating DVR from the corpus...
+2024-03-24 04:23:34,757 INFO:DVR created.
+2024-03-24 04:23:34,757 INFO:Epsilon calculated: 6.0476311428813336e-06
+2024-03-24 04:23:34,757 INFO:Creating signatures...
+2024-03-24 04:24:59,468 INFO:Signatures created.
+2024-03-24 04:24:59,468 INFO:Calculating sockpuppet distance...
+2024-03-24 04:32:02,409 INFO:1.Reading frequency data...
+2024-03-24 04:32:02,593 INFO:  Data loaded successfully.
+2024-03-24 04:32:02,593 INFO:2. Creating DVR from the corpus...
+2024-03-24 04:32:04,092 INFO:DVR created.
+2024-03-24 04:32:04,092 INFO:Epsilon calculated: 6.0476311428813336e-06
+2024-03-24 04:32:04,092 INFO:Creating signatures...
+2024-03-24 04:33:09,475 INFO:Signatures created.
+2024-03-24 04:33:09,493 INFO:Calculating sockpuppet distance...
+2024-03-24 04:47:11,941 INFO:1.Reading frequency data...
+2024-03-24 04:47:12,025 INFO:  Data loaded successfully.
+2024-03-24 04:47:12,025 INFO:2. Creating DVR from the corpus...
+2024-03-24 04:47:12,463 INFO:DVR created.
+2024-03-24 04:47:12,463 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 04:47:12,463 INFO:Creating signatures...
+2024-03-24 04:47:21,009 INFO:Signatures created.
+2024-03-24 04:47:21,009 INFO:Calculating sockpuppet distance...
+2024-03-24 04:56:56,899 INFO:1.Reading frequency data...
+2024-03-24 04:56:57,000 INFO:  Data loaded successfully.
+2024-03-24 04:56:57,000 INFO:2. Creating DVR from the corpus...
+2024-03-24 04:56:57,449 INFO:DVR created.
+2024-03-24 04:56:57,449 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 04:56:57,449 INFO:Creating signatures...
+2024-03-24 04:57:12,447 INFO:Signatures created.
+2024-03-24 04:57:12,447 INFO:Calculating sockpuppet distance...
+2024-03-24 05:11:17,546 INFO:Sockpuppet distance calculated [[0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]]
+2024-03-24 05:11:17,546 INFO:Generating histogram...
+2024-03-24 05:13:14,393 INFO:1.Reading frequency data...
+2024-03-24 05:13:14,477 INFO:  Data loaded successfully.
+2024-03-24 05:13:14,477 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:13:14,910 INFO:DVR created.
+2024-03-24 05:13:14,910 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 05:13:14,910 INFO:Creating signatures...
+2024-03-24 05:13:23,765 INFO:Signatures created.
+2024-03-24 05:13:23,766 INFO:Calculating sockpuppet distance...
+2024-03-24 05:15:38,374 INFO:1.Reading frequency data...
+2024-03-24 05:15:38,374 INFO:  Data loaded successfully.
+2024-03-24 05:15:38,374 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:15:38,390 INFO:DVR created.
+2024-03-24 05:15:38,390 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:15:38,390 INFO:Creating signatures...
+2024-03-24 05:15:38,457 INFO:Signatures created.
+2024-03-24 05:15:38,457 INFO:Calculating sockpuppet distance...
+2024-03-24 05:15:48,340 INFO:Sockpuppet distance calculated           C00001    C00003    C00004    C00005    C00007  ...    C00075    C00076    C00077    C00078    C00079
+C00001       NaN  0.879067  0.889110  0.842747  0.799605  ...  0.860463  0.996837  0.906591  0.870427  0.850161
+C00003  0.879067       NaN  0.709996  0.868652  0.612399  ...  0.651916  0.860543  0.799587  0.667448  0.577765
+C00004  0.889110  0.709996       NaN  0.844155  0.564123  ...  0.635499  0.833523  0.812267  0.595319  0.598669
+C00005  0.842747  0.868652  0.844155       NaN  0.783914  ...  0.847314  0.951785  0.927910  0.838612  0.826434
+C00007  0.799605  0.612399  0.564123  0.783914       NaN  ...  0.535317  0.781187  0.672287  0.503089  0.495705
+...          ...       ...       ...       ...       ...  ...       ...       ...       ...       ...       ...
+C00075  0.860463  0.651916  0.635499  0.847314  0.535317  ...       NaN  0.834003  0.786186  0.590303  0.535363
+C00076  0.996837  0.860543  0.833523  0.951785  0.781187  ...  0.834003       NaN  0.975826  0.846690  0.786530
+C00077  0.906591  0.799587  0.812267  0.927910  0.672287  ...  0.786186  0.975826       NaN  0.801540  0.759993
+C00078  0.870427  0.667448  0.595319  0.838612  0.503089  ...  0.590303  0.846690  0.801540       NaN  0.558833
+C00079  0.850161  0.577765  0.598669  0.826434  0.495705  ...  0.535363  0.786530  0.759993  0.558833       NaN
+
+[100 rows x 100 columns]
+2024-03-24 05:15:48,340 INFO:E - N - D
+2024-03-24 05:17:46,321 INFO:1.Reading frequency data...
+2024-03-24 05:17:46,337 INFO:  Data loaded successfully.
+2024-03-24 05:17:46,337 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:17:46,338 INFO:DVR created.
+2024-03-24 05:17:46,338 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:17:46,338 INFO:Creating signatures...
+2024-03-24 05:17:46,405 INFO:Signatures created.
+2024-03-24 05:17:46,405 INFO:Calculating sockpuppet distance...
+2024-03-24 05:17:56,455 INFO:Sockpuppet distance calculated           C00001    C00003    C00004    C00005    C00007  ...    C00075    C00076    C00077    C00078    C00079
+C00001       NaN  0.879067  0.889110  0.842747  0.799605  ...  0.860463  0.996837  0.906591  0.870427  0.850161
+C00003  0.879067       NaN  0.709996  0.868652  0.612399  ...  0.651916  0.860543  0.799587  0.667448  0.577765
+C00004  0.889110  0.709996       NaN  0.844155  0.564123  ...  0.635499  0.833523  0.812267  0.595319  0.598669
+C00005  0.842747  0.868652  0.844155       NaN  0.783914  ...  0.847314  0.951785  0.927910  0.838612  0.826434
+C00007  0.799605  0.612399  0.564123  0.783914       NaN  ...  0.535317  0.781187  0.672287  0.503089  0.495705
+...          ...       ...       ...       ...       ...  ...       ...       ...       ...       ...       ...
+C00075  0.860463  0.651916  0.635499  0.847314  0.535317  ...       NaN  0.834003  0.786186  0.590303  0.535363
+C00076  0.996837  0.860543  0.833523  0.951785  0.781187  ...  0.834003       NaN  0.975826  0.846690  0.786530
+C00077  0.906591  0.799587  0.812267  0.927910  0.672287  ...  0.786186  0.975826       NaN  0.801540  0.759993
+C00078  0.870427  0.667448  0.595319  0.838612  0.503089  ...  0.590303  0.846690  0.801540       NaN  0.558833
+C00079  0.850161  0.577765  0.598669  0.826434  0.495705  ...  0.535363  0.786530  0.759993  0.558833       NaN
+
+[100 rows x 100 columns]
+2024-03-24 05:17:56,488 INFO:E - N - D
+2024-03-24 05:26:30,477 INFO:1.Reading frequency data...
+2024-03-24 05:26:30,489 INFO:  Data loaded successfully.
+2024-03-24 05:26:30,489 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:26:30,503 INFO:DVR created.
+2024-03-24 05:26:30,503 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:26:30,503 INFO:Creating signatures...
+2024-03-24 05:26:30,570 INFO:Signatures created.
+2024-03-24 05:26:30,570 INFO:Calculating sockpuppet distance...
+2024-03-24 05:27:41,657 INFO:1.Reading frequency data...
+2024-03-24 05:27:41,670 INFO:  Data loaded successfully.
+2024-03-24 05:27:41,670 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:27:41,685 INFO:DVR created.
+2024-03-24 05:27:41,686 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:27:41,686 INFO:Creating signatures...
+2024-03-24 05:27:41,752 INFO:Signatures created.
+2024-03-24 05:27:41,752 INFO:Calculating sockpuppet distance...
+2024-03-24 05:27:51,559 INFO:Sockpuppet distance calculated    Corpus 1 Corpus 2  value
+0    C00001   C00001    0.0
+1    C00003   C00003    0.0
+2    C00004   C00004    0.0
+3    C00005   C00005    0.0
+4    C00007   C00007    0.0
+..      ...      ...    ...
+95   C00075   C00075    0.0
+96   C00076   C00076    0.0
+97   C00077   C00077    0.0
+98   C00078   C00078    0.0
+99   C00079   C00079    0.0
+
+[100 rows x 3 columns]
+2024-03-24 05:27:51,576 INFO:E - N - D
+2024-03-24 05:30:50,071 INFO:1.Reading frequency data...
+2024-03-24 05:30:50,153 INFO:  Data loaded successfully.
+2024-03-24 05:30:50,153 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:30:50,640 INFO:DVR created.
+2024-03-24 05:30:50,640 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 05:30:50,640 INFO:Creating signatures...
+2024-03-24 05:30:59,504 INFO:Signatures created.
+2024-03-24 05:30:59,504 INFO:Calculating sockpuppet distance...
+2024-03-24 05:35:50,432 INFO:1.Reading frequency data...
+2024-03-24 05:35:50,526 INFO:  Data loaded successfully.
+2024-03-24 05:35:50,526 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:35:50,980 INFO:DVR created.
+2024-03-24 05:35:50,980 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 05:35:50,980 INFO:Creating signatures...
+2024-03-24 05:36:00,325 INFO:Signatures created.
+2024-03-24 05:36:00,325 INFO:Calculating sockpuppet distance...
+2024-03-24 05:42:16,103 INFO:Sockpuppet distance calculated                  Corpus 1             Corpus 2  value
+0                   12458                12458    0.0
+1                 5415242              5415242    0.0
+2                 6833142              6833142    0.0
+3                 7844442              7844442    0.0
+4                 9308852              9308852    0.0
+...                   ...                  ...    ...
+2927  1274542276610490375  1274542276610490375    0.0
+2928  1274545760206454784  1274545760206454784    0.0
+2929  1274568163259228165  1274568163259228165    0.0
+2930  1274623215437066240  1274623215437066240    0.0
+2931  1274715834188025857  1274715834188025857    0.0
+
+[2932 rows x 3 columns]
+2024-03-24 05:42:16,103 INFO:E - N - D
+2024-03-24 05:46:09,018 INFO:1.Reading frequency data...
+2024-03-24 05:46:09,033 INFO:  Data loaded successfully.
+2024-03-24 05:46:09,033 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:46:09,049 INFO:DVR created.
+2024-03-24 05:46:09,049 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:46:09,049 INFO:Creating signatures...
+2024-03-24 05:46:09,111 INFO:Signatures created.
+2024-03-24 05:46:09,111 INFO:Calculating sockpuppet distance...
+2024-03-24 05:46:19,187 INFO:Sockpuppet distance calculated    Corpus 1 Corpus 2  value
+0    C00001   C00001    0.0
+1    C00003   C00003    0.0
+2    C00004   C00004    0.0
+3    C00005   C00005    0.0
+4    C00007   C00007    0.0
+..      ...      ...    ...
+95   C00075   C00075    0.0
+96   C00076   C00076    0.0
+97   C00077   C00077    0.0
+98   C00078   C00078    0.0
+99   C00079   C00079    0.0
+
+[100 rows x 3 columns]
+2024-03-24 05:46:19,187 INFO:E - N - D
+2024-03-24 05:46:55,789 INFO:1.Reading frequency data...
+2024-03-24 05:46:55,804 INFO:  Data loaded successfully.
+2024-03-24 05:46:55,804 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:46:55,820 INFO:DVR created.
+2024-03-24 05:46:55,820 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:46:55,820 INFO:Creating signatures...
+2024-03-24 05:46:55,882 INFO:Signatures created.
+2024-03-24 05:46:55,882 INFO:Calculating sockpuppet distance...
+2024-03-24 05:47:05,620 INFO:Sockpuppet distance calculated    Corpus 1 Corpus 2  value
+0    C00001   C00001    0.0
+1    C00003   C00003    0.0
+2    C00004   C00004    0.0
+3    C00005   C00005    0.0
+4    C00007   C00007    0.0
+..      ...      ...    ...
+95   C00075   C00075    0.0
+96   C00076   C00076    0.0
+97   C00077   C00077    0.0
+98   C00078   C00078    0.0
+99   C00079   C00079    0.0
+
+[100 rows x 3 columns]
+2024-03-24 05:47:05,620 INFO:E - N - D
+2024-03-24 05:48:00,352 INFO:1.Reading frequency data...
+2024-03-24 05:48:00,368 INFO:  Data loaded successfully.
+2024-03-24 05:48:00,368 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:48:00,384 INFO:DVR created.
+2024-03-24 05:48:00,384 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:48:00,384 INFO:Creating signatures...
+2024-03-24 05:48:00,454 INFO:Signatures created.
+2024-03-24 05:48:00,454 INFO:Calculating sockpuppet distance...
+2024-03-24 05:48:10,227 INFO:Sockpuppet distance calculated      Corpus 1 Corpus 2       value
+0      C00001   C00001    0.000000
+1      C00001   C00003  663.189805
+2      C00001   C00004  670.766523
+3      C00001   C00005  635.788488
+4      C00001   C00007  603.241401
+...       ...      ...         ...
+9995   C00079   C00075  403.891055
+9996   C00079   C00076  593.377258
+9997   C00079   C00077  573.357171
+9998   C00079   C00078  421.597286
+9999   C00079   C00079    0.000000
+
+[10000 rows x 3 columns]
+2024-03-24 05:48:10,227 INFO:E - N - D
+2024-03-24 05:53:19,435 INFO:1.Reading frequency data...
+2024-03-24 05:53:19,449 INFO:  Data loaded successfully.
+2024-03-24 05:53:19,449 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:53:19,452 INFO:DVR created.
+2024-03-24 05:53:19,465 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:53:19,465 INFO:Creating signatures...
+2024-03-24 05:53:19,536 INFO:Signatures created.
+2024-03-24 05:53:19,536 INFO:Calculating sockpuppet distance...
+2024-03-24 05:53:29,371 INFO:Sockpuppet distance calculated     Corpus 1  Corpus 2  value
+0          0         0    0.0
+1          1         1    0.0
+2          2         2    0.0
+3          3         3    0.0
+4          4         4    0.0
+..       ...       ...    ...
+95        95        95    0.0
+96        96        96    0.0
+97        97        97    0.0
+98        98        98    0.0
+99        99        99    0.0
+
+[100 rows x 3 columns]
+2024-03-24 05:53:29,374 INFO:E - N - D
+2024-03-24 05:54:25,525 INFO:1.Reading frequency data...
+2024-03-24 05:54:25,525 INFO:  Data loaded successfully.
+2024-03-24 05:54:25,525 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:54:25,541 INFO:DVR created.
+2024-03-24 05:54:25,541 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:54:25,541 INFO:Creating signatures...
+2024-03-24 05:54:25,603 INFO:Signatures created.
+2024-03-24 05:54:25,603 INFO:Calculating sockpuppet distance...
+2024-03-24 05:54:35,507 INFO:Sockpuppet distance calculated       Corpus 1  Corpus 2       value
+0            0         0    0.000000
+1            0         1  663.189805
+2            0         2  670.766523
+3            0         3  635.788488
+4            0         4  603.241401
+...        ...       ...         ...
+9995        99        95  403.891055
+9996        99        96  593.377258
+9997        99        97  573.357171
+9998        99        98  421.597286
+9999        99        99    0.000000
+
+[10000 rows x 3 columns]
+2024-03-24 05:54:35,511 INFO:E - N - D
+2024-03-24 05:56:53,984 INFO:1.Reading frequency data...
+2024-03-24 05:56:53,994 INFO:  Data loaded successfully.
+2024-03-24 05:56:53,994 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:56:53,994 INFO:DVR created.
+2024-03-24 05:56:53,994 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 05:56:53,994 INFO:Creating signatures...
+2024-03-24 05:56:54,057 INFO:Signatures created.
+2024-03-24 05:56:54,057 INFO:Calculating sockpuppet distance...
+2024-03-24 05:57:03,903 INFO:Sockpuppet distance calculated       Corpus Corpus      value
+0     C00001  C00001  0.000000
+1     C00003  C00001  0.879067
+2     C00004  C00001  0.889110
+3     C00005  C00001  0.842747
+4     C00007  C00001  0.799605
+...      ...     ...       ...
+5045  C00078  C00077  0.801540
+5046  C00079  C00077  0.759993
+5047  C00078  C00078  0.000000
+5048  C00079  C00078  0.558833
+5049  C00079  C00079  0.000000
+
+[5050 rows x 3 columns]
+2024-03-24 05:57:03,903 INFO:E - N - D
+2024-03-24 05:58:04,565 INFO:1.Reading frequency data...
+2024-03-24 05:58:04,643 INFO:  Data loaded successfully.
+2024-03-24 05:58:04,643 INFO:2. Creating DVR from the corpus...
+2024-03-24 05:58:05,046 INFO:DVR created.
+2024-03-24 05:58:05,046 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 05:58:05,046 INFO:Creating signatures...
+2024-03-24 05:58:13,328 INFO:Signatures created.
+2024-03-24 05:58:13,328 INFO:Calculating sockpuppet distance...
+2024-03-24 06:06:06,961 INFO:Sockpuppet distance calculated                       Corpus              Corpus      value
+0                      12458                12458  0.000000
+1                    5415242                12458  0.195861
+2                    6833142                12458  0.195542
+3                    7844442                12458  0.188356
+4                    9308852                12458  0.220010
+...                      ...                  ...       ...
+3252520  1274623215437066240  1274568163259228165  0.731715
+3252521  1274715834188025857  1274568163259228165  0.741106
+3252522  1274623215437066240  1274623215437066240  0.000000
+3252523  1274715834188025857  1274623215437066240  0.075139
+3252524  1274715834188025857  1274715834188025857  0.000000
+
+[3252525 rows x 3 columns]
+2024-03-24 06:06:06,961 INFO:E - N - D
+2024-03-24 06:12:13,186 INFO:1.Reading frequency data...
+2024-03-24 06:12:13,296 INFO:  Data loaded successfully.
+2024-03-24 06:12:13,296 INFO:2. Creating DVR from the corpus...
+2024-03-24 06:12:13,857 INFO:DVR created.
+2024-03-24 06:12:13,857 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 06:12:13,857 INFO:Creating signatures...
+2024-03-24 06:12:25,009 INFO:Signatures created.
+2024-03-24 06:12:25,009 INFO:Calculating sockpuppet distance...
+2024-03-24 06:13:44,995 INFO:1.Reading frequency data...
+2024-03-24 06:13:45,121 INFO:  Data loaded successfully.
+2024-03-24 06:13:45,121 INFO:2. Creating DVR from the corpus...
+2024-03-24 06:13:45,684 INFO:DVR created.
+2024-03-24 06:13:45,684 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 06:13:45,684 INFO:Creating signatures...
+2024-03-24 06:13:58,479 INFO:Signatures created.
+2024-03-24 06:13:58,479 INFO:Calculating sockpuppet distance...
+2024-03-24 06:19:54,427 INFO:Sockpuppet distance calculated                       Corpus              Corpus      value
+0                      12458                12458  0.000000
+1                    5415242                12458  0.195861
+2                    6833142                12458  0.195542
+3                    7844442                12458  0.188356
+4                    9308852                12458  0.220010
+...                      ...                  ...       ...
+3252520  1274623215437066240  1274568163259228165  0.731715
+3252521  1274715834188025857  1274568163259228165  0.741106
+3252522  1274623215437066240  1274623215437066240  0.000000
+3252523  1274715834188025857  1274623215437066240  0.075139
+3252524  1274715834188025857  1274715834188025857  0.000000
+
+[3252525 rows x 3 columns]
+2024-03-24 06:19:54,442 INFO:E - N - D
+2024-03-24 06:21:48,334 INFO:1.Reading frequency data...
+2024-03-24 06:21:48,459 INFO:  Data loaded successfully.
+2024-03-24 06:21:48,459 INFO:2. Creating DVR from the corpus...
+2024-03-24 06:21:49,057 INFO:DVR created.
+2024-03-24 06:21:49,057 INFO:Epsilon calculated: 1.0150635429777904e-05
+2024-03-24 06:21:49,057 INFO:Creating signatures...
+2024-03-24 06:24:07,754 INFO:1.Reading frequency data...
+2024-03-24 06:24:08,016 INFO:  Data loaded successfully.
+2024-03-24 06:24:08,016 INFO:2. Creating DVR from the corpus...
+2024-03-24 06:24:09,950 INFO:DVR created.
+2024-03-24 06:24:09,950 INFO:Epsilon calculated: 6.0476311428813336e-06
+2024-03-24 06:24:09,950 INFO:Creating signatures...
+2024-03-24 06:25:29,868 INFO:Signatures created.
+2024-03-24 06:25:29,868 INFO:Calculating sockpuppet distance...
+2024-03-24 06:30:09,342 INFO:1.Reading frequency data...
+2024-03-24 06:30:09,623 INFO:  Data loaded successfully.
+2024-03-24 06:30:09,623 INFO:2. Creating DVR from the corpus...
+2024-03-24 06:30:11,524 INFO:DVR created.
+2024-03-24 06:30:11,524 INFO:Epsilon calculated: 6.0476311428813336e-06
+2024-03-24 06:30:11,524 INFO:Creating signatures...
+2024-03-24 06:31:20,463 INFO:Signatures created.
+2024-03-24 06:31:20,463 INFO:Calculating sockpuppet distance...
+2024-03-24 12:51:12,518 INFO:1.Reading frequency data...
+2024-03-24 12:51:12,552 INFO:  Data loaded successfully.
+2024-03-24 12:51:12,554 INFO:2. Creating DVR from the corpus...
+2024-03-24 12:51:12,602 INFO:DVR created.
+2024-03-24 12:51:12,602 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 12:51:12,602 INFO:Creating signatures...
+2024-03-24 12:51:12,692 INFO:Signatures created.
+2024-03-24 12:51:12,692 INFO:Calculating sockpuppet distance...
+2024-03-24 12:51:23,463 INFO:Sockpuppet distance calculated         Corpus Corpus      value
+0       C00001  C00001  0.000000
+1       C00003  C00001  0.882206
+2       C00004  C00001  0.889567
+3     C0000419  C00001  0.007954
+4       C00005  C00001  0.724171
+...        ...     ...       ...
+5146    C00078  C00077  0.786440
+5147    C00079  C00077  0.768833
+5148    C00078  C00078  0.000000
+5149    C00079  C00078  0.562841
+5150    C00079  C00079  0.000000
+
+[5151 rows x 3 columns]
+2024-03-24 12:51:23,463 INFO:E - N - D
+2024-03-24 12:56:16,999 INFO:1.Reading frequency data...
+2024-03-24 12:56:17,012 INFO:  Data loaded successfully.
+2024-03-24 12:56:17,012 INFO:2. Creating DVR from the corpus...
+2024-03-24 12:56:17,039 INFO:DVR created.
+2024-03-24 12:56:17,039 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 12:56:17,039 INFO:Creating signatures...
+2024-03-24 12:56:17,119 INFO:Signatures created.
+2024-03-24 12:56:17,119 INFO:Calculating sockpuppet distance...
+2024-03-24 12:56:27,555 INFO:Sockpuppet distance calculated         Corpus Corpus      value
+0       C00001  C00001  0.000000
+1       C00003  C00001  0.882206
+2       C00004  C00001  0.889567
+3     C0000419  C00001  0.007954
+4       C00005  C00001  0.724171
+...        ...     ...       ...
+5146    C00078  C00077  0.786440
+5147    C00079  C00077  0.768833
+5148    C00078  C00078  0.000000
+5149    C00079  C00078  0.562841
+5150    C00079  C00079  0.000000
+
+[5151 rows x 3 columns]
+2024-03-24 12:56:27,555 INFO:E - N - D
+2024-03-24 13:06:43,760 INFO:1.Reading frequency data...
+2024-03-24 13:06:43,776 INFO:  Data loaded successfully.
+2024-03-24 13:06:43,776 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:06:43,816 INFO:DVR created.
+2024-03-24 13:06:43,816 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:06:43,816 INFO:Creating signatures...
+2024-03-24 13:06:43,938 INFO:Signatures created.
+2024-03-24 13:06:43,938 INFO:Calculating sockpuppet distance...
+2024-03-24 13:08:20,474 INFO:Sockpuppet distance calculated         Corpus Corpus      value
+0       C00001  C00001  0.000000
+1       C00003  C00001  0.882206
+2       C00004  C00001  0.889567
+3     C0000419  C00001  0.007954
+4       C00005  C00001  0.724171
+...        ...     ...       ...
+5146    C00078  C00077  0.786440
+5147    C00079  C00077  0.768833
+5148    C00078  C00078  0.000000
+5149    C00079  C00078  0.562841
+5150    C00079  C00079  0.000000
+
+[5151 rows x 3 columns]
+2024-03-24 13:08:20,490 INFO:E - N - D
+2024-03-24 13:08:56,977 INFO:1.Reading frequency data...
+2024-03-24 13:08:57,001 INFO:  Data loaded successfully.
+2024-03-24 13:08:57,001 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:08:57,033 INFO:DVR created.
+2024-03-24 13:08:57,033 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:08:57,033 INFO:Creating signatures...
+2024-03-24 13:08:57,179 INFO:Signatures created.
+2024-03-24 13:08:57,179 INFO:Calculating sockpuppet distance...
+2024-03-24 13:16:08,674 INFO:Sockpuppet distance calculated         Corpus Corpus      value
+0       C00001  C00001  0.000000
+1       C00003  C00001  0.882206
+2       C00004  C00001  0.889567
+3     C0000419  C00001  0.007954
+4       C00005  C00001  0.724171
+...        ...     ...       ...
+5146    C00078  C00077  0.786440
+5147    C00079  C00077  0.768833
+5148    C00078  C00078  0.000000
+5149    C00079  C00078  0.562841
+5150    C00079  C00079  0.000000
+
+[5151 rows x 3 columns]
+2024-03-24 13:16:08,707 INFO:E - N - D
+2024-03-24 13:19:27,236 INFO:1.Reading frequency data...
+2024-03-24 13:19:27,253 INFO:  Data loaded successfully.
+2024-03-24 13:19:27,253 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:19:27,270 INFO:DVR created.
+2024-03-24 13:19:27,270 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:19:27,270 INFO:Creating signatures...
+2024-03-24 13:19:27,364 INFO:Signatures created.
+2024-03-24 13:19:27,364 INFO:Calculating sockpuppet distance...
+2024-03-24 13:19:38,540 INFO:Sockpuppet distance calculated      Corpus Corpus      value
+39   C0005b  C0002b  0.985390
+54   C0005b  C0003d  0.942301
+55   C00073  C0003d  0.998993
+64   C00050  C00049  0.959351
+65   C0005b  C00049  0.798965
+66   C00073  C00049  0.867399
+73   C00049  C00050  0.959351
+75   C0005b  C00050  0.984642
+76   C00073  C00050  1.000000
+84   C0002b  C0005b  0.985390
+85   C0003d  C0005b  0.942301
+86   C00049  C0005b  0.798965
+87   C00050  C0005b  0.984642
+89   C00073  C0005b  0.892347
+110  C0003d  C00073  0.998993
+111  C00049  C00073  0.867399
+112  C00050  C00073  1.000000
+113  C0005b  C00073  0.892347
+2024-03-24 13:19:38,544 INFO:E - N - D
+2024-03-24 13:20:37,572 INFO:1.Reading frequency data...
+2024-03-24 13:20:37,588 INFO:  Data loaded successfully.
+2024-03-24 13:20:37,588 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:20:37,604 INFO:DVR created.
+2024-03-24 13:20:37,604 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:20:37,604 INFO:Creating signatures...
+2024-03-24 13:20:37,701 INFO:Signatures created.
+2024-03-24 13:20:37,701 INFO:Calculating sockpuppet distance...
+2024-03-24 13:20:49,247 INFO:Sockpuppet distance calculated        Corpus   Corpus      value
+0      C00001    C00001  0.000000
+1    C0000419    C00001  0.039805
+2      C00003    C00003  0.000000
+3      C00004    C00004  0.000000
+4      C00001  C0000419  0.039805
+..        ...       ...       ...
+116    C00075    C00075  0.000000
+117    C00076    C00076  0.000000
+118    C00077    C00077  0.000000
+119    C00078    C00078  0.000000
+120    C00079    C00079  0.000000
+
+[103 rows x 3 columns]
+2024-03-24 13:20:49,255 INFO:E - N - D
+2024-03-24 13:21:25,405 INFO:1.Reading frequency data...
+2024-03-24 13:21:25,429 INFO:  Data loaded successfully.
+2024-03-24 13:21:25,429 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:21:25,462 INFO:DVR created.
+2024-03-24 13:21:25,462 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:21:25,462 INFO:Creating signatures...
+2024-03-24 13:21:25,624 INFO:Signatures created.
+2024-03-24 13:21:25,624 INFO:Calculating sockpuppet distance...
+2024-03-24 13:21:36,513 INFO:Sockpuppet distance calculated         Corpus Corpus      value
+0       C00001  C00001  0.000000
+1       C00003  C00001  0.882206
+2       C00004  C00001  0.889567
+3     C0000419  C00001  0.007954
+4       C00005  C00001  0.724171
+...        ...     ...       ...
+5146    C00078  C00077  0.786440
+5147    C00079  C00077  0.768833
+5148    C00078  C00078  0.000000
+5149    C00079  C00078  0.562841
+5150    C00079  C00079  0.000000
+
+[5151 rows x 3 columns]
+2024-03-24 13:21:36,521 INFO:E - N - D
+2024-03-24 13:29:11,766 INFO:1.Reading frequency data...
+2024-03-24 13:29:11,782 INFO:  Data loaded successfully.
+2024-03-24 13:29:11,782 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:29:11,806 INFO:DVR created.
+2024-03-24 13:29:11,806 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:29:11,806 INFO:Creating signatures...
+2024-03-24 13:29:11,895 INFO:Signatures created.
+2024-03-24 13:29:11,895 INFO:Calculating sockpuppet distance...
+2024-03-24 13:29:22,985 INFO:Sockpuppet distance calculated       Corpus Corpus      value
+0     C00001  C00001  0.000000
+1     C00003  C00001  0.879067
+2     C00004  C00001  0.889110
+3     C00005  C00001  0.842747
+4     C00007  C00001  0.799605
+...      ...     ...       ...
+5045  C00078  C00077  0.801540
+5046  C00079  C00077  0.759993
+5047  C00078  C00078  0.000000
+5048  C00079  C00078  0.558833
+5049  C00079  C00079  0.000000
+
+[5050 rows x 3 columns]
+2024-03-24 13:29:23,001 INFO:E - N - D
+2024-03-24 13:30:30,531 INFO:1.Reading frequency data...
+2024-03-24 13:30:30,547 INFO:  Data loaded successfully.
+2024-03-24 13:30:30,547 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:30:30,563 INFO:DVR created.
+2024-03-24 13:30:30,563 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:30:30,563 INFO:Creating signatures...
+2024-03-24 13:30:30,652 INFO:Signatures created.
+2024-03-24 13:30:30,652 INFO:Calculating sockpuppet distance...
+2024-03-24 13:30:41,536 INFO:Sockpuppet distance calculated       Corpus  Corpus     value
+0     C00001  C00003  0.879067
+1     C00001  C00004  0.889110
+2     C00001  C00005  0.842747
+3     C00001  C00007  0.799605
+4     C00001  C00008  0.862947
+...      ...     ...       ...
+9895  C00079  C00074  0.797004
+9896  C00079  C00075  0.535363
+9897  C00079  C00076  0.786530
+9898  C00079  C00077  0.759993
+9899  C00079  C00078  0.558833
+
+[9900 rows x 3 columns]
+2024-03-24 13:30:41,544 INFO:E - N - D
+2024-03-24 13:34:05,141 INFO:1.Reading frequency data...
+2024-03-24 13:34:05,157 INFO:  Data loaded successfully.
+2024-03-24 13:34:05,157 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:34:05,181 INFO:DVR created.
+2024-03-24 13:34:05,181 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:34:05,181 INFO:Creating signatures...
+2024-03-24 13:34:05,271 INFO:Signatures created.
+2024-03-24 13:34:05,271 INFO:Calculating sockpuppet distance...
+2024-03-24 13:34:16,499 INFO:Sockpuppet distance calculated       Corpus Corpus      value
+0     C00003  C00001  0.879067
+1     C00004  C00001  0.889110
+2     C00005  C00001  0.842747
+3     C00007  C00001  0.799605
+4     C00008  C00001  0.862947
+...      ...     ...       ...
+4938  C00078  C00076  0.846690
+4939  C00079  C00076  0.786530
+4940  C00078  C00077  0.801540
+4941  C00079  C00077  0.759993
+4942  C00079  C00078  0.558833
+
+[4943 rows x 3 columns]
+2024-03-24 13:34:16,499 INFO:E - N - D
+2024-03-24 13:35:39,035 INFO:1.Reading frequency data...
+2024-03-24 13:35:39,060 INFO:  Data loaded successfully.
+2024-03-24 13:35:39,060 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:35:39,108 INFO:DVR created.
+2024-03-24 13:35:39,108 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:35:39,108 INFO:Creating signatures...
+2024-03-24 13:35:39,263 INFO:Signatures created.
+2024-03-24 13:35:39,263 INFO:Calculating sockpuppet distance...
+2024-03-24 13:35:50,383 INFO:Sockpuppet distance calculated      Corpus Corpus   value
+0    C00001  C00001    0.0
+1    C00003  C00003    0.0
+2    C00004  C00004    0.0
+3    C00005  C00005    0.0
+4    C00007  C00007    0.0
+..      ...     ...    ...
+102  C00075  C00075    0.0
+103  C00076  C00076    0.0
+104  C00077  C00077    0.0
+105  C00078  C00078    0.0
+106  C00079  C00079    0.0
+
+[107 rows x 3 columns]
+2024-03-24 13:35:50,383 INFO:E - N - D
+2024-03-24 13:46:10,672 INFO:1.Reading frequency data...
+2024-03-24 13:46:10,690 INFO:  Data loaded successfully.
+2024-03-24 13:46:10,690 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:46:10,709 INFO:DVR created.
+2024-03-24 13:46:10,709 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:46:10,709 INFO:Creating signatures...
+2024-03-24 13:46:10,810 INFO:Signatures created.
+2024-03-24 13:46:10,810 INFO:Calculating sockpuppet distance...
+2024-03-24 13:46:21,691 INFO:Sockpuppet distance calculated      Corpus Corpus   value
+0    C00001  C00001    0.0
+1    C00003  C00003    0.0
+2    C00004  C00004    0.0
+3    C00005  C00005    0.0
+4    C00007  C00007    0.0
+..      ...     ...    ...
+109  C00075  C00075    0.0
+110  C00076  C00076    0.0
+111  C00077  C00077    0.0
+112  C00078  C00078    0.0
+113  C00079  C00079    0.0
+
+[114 rows x 3 columns]
+2024-03-24 13:46:21,692 INFO:E - N - D
+2024-03-24 13:47:07,376 INFO:1.Reading frequency data...
+2024-03-24 13:47:07,390 INFO:  Data loaded successfully.
+2024-03-24 13:47:07,390 INFO:2. Creating DVR from the corpus...
+2024-03-24 13:47:07,417 INFO:DVR created.
+2024-03-24 13:47:07,417 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 13:47:07,417 INFO:Creating signatures...
+2024-03-24 13:47:07,511 INFO:Signatures created.
+2024-03-24 13:47:07,511 INFO:Calculating sockpuppet distance...
+2024-03-24 13:47:18,596 INFO:Sockpuppet distance calculated       Corpus Corpus      value
+0     C00003  C00001  0.881857
+1     C00004  C00001  0.891932
+2     C00005  C00001  0.845421
+3     C00007  C00001  0.802142
+4     C00008  C00001  0.865685
+...      ...     ...       ...
+9881  C00074  C00079  0.799533
+9882  C00075  C00079  0.537062
+9883  C00076  C00079  0.789026
+9884  C00077  C00079  0.762404
+9885  C00078  C00079  0.560606
+
+[9886 rows x 3 columns]
+2024-03-24 13:47:18,602 INFO:E - N - D
+2024-03-24 15:13:55,326 INFO:1.Reading frequency data...
+2024-03-24 15:13:55,340 INFO:  Data loaded successfully.
+2024-03-24 15:13:55,340 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:13:55,354 INFO:DVR created.
+2024-03-24 15:13:55,354 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 15:13:55,354 INFO:Creating signatures...
+2024-03-24 15:13:55,417 INFO:Signatures created.
+2024-03-24 15:13:55,418 INFO:Calculating sockpuppet distance...
+2024-03-24 15:13:55,477 INFO:Sockpuppet distance calculated         C00001  C00003  C00004  C00005  C00007  C00008  C00009  ...  C00073  C00074  C00075  C00076  C00077  C00078  C00079
+C00001     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00003     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00004     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00005     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00007     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+...        ...     ...     ...     ...     ...     ...     ...  ...     ...     ...     ...     ...     ...     ...     ...
+C00075     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00076     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00077     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00078     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00079     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+
+[100 rows x 100 columns]
+2024-03-24 15:13:55,516 INFO:E - N - D
+2024-03-24 15:14:27,316 INFO:1.Reading frequency data...
+2024-03-24 15:14:27,328 INFO:  Data loaded successfully.
+2024-03-24 15:14:27,328 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:14:27,343 INFO:DVR created.
+2024-03-24 15:14:27,343 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 15:14:27,343 INFO:Creating signatures...
+2024-03-24 15:14:27,411 INFO:Signatures created.
+2024-03-24 15:14:27,411 INFO:Calculating sockpuppet distance...
+2024-03-24 15:14:27,471 INFO:Sockpuppet distance calculated         C00001  C00003  C00004  C00005  C00007  C00008  C00009  ...  C00073  C00074  C00075  C00076  C00077  C00078  C00079
+C00001     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00003     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00004     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00005     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00007     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+...        ...     ...     ...     ...     ...     ...     ...  ...     ...     ...     ...     ...     ...     ...     ...
+C00075     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00076     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00077     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00078     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+C00079     0.0     0.0     0.0     0.0     0.0     0.0     0.0  ...     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+
+[100 rows x 100 columns]
+2024-03-24 15:14:27,517 INFO:E - N - D
+2024-03-24 15:15:11,337 INFO:1.Reading frequency data...
+2024-03-24 15:15:11,347 INFO:  Data loaded successfully.
+2024-03-24 15:15:11,347 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:15:11,361 INFO:DVR created.
+2024-03-24 15:15:11,361 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 15:15:11,361 INFO:Creating signatures...
+2024-03-24 15:15:11,428 INFO:Signatures created.
+2024-03-24 15:15:11,428 INFO:Calculating sockpuppet distance...
+2024-03-24 15:15:21,228 INFO:Sockpuppet distance calculated       Corpus Corpus      value
+0     C00003  C00001  0.881857
+1     C00004  C00001  0.891932
+2     C00005  C00001  0.845421
+3     C00007  C00001  0.802142
+4     C00008  C00001  0.865685
+...      ...     ...       ...
+9881  C00074  C00079  0.799533
+9882  C00075  C00079  0.537062
+9883  C00076  C00079  0.789026
+9884  C00077  C00079  0.762404
+9885  C00078  C00079  0.560606
+
+[9886 rows x 3 columns]
+2024-03-24 15:15:21,233 INFO:E - N - D
+2024-03-24 15:17:33,147 INFO:1.Reading frequency data...
+2024-03-24 15:17:33,158 INFO:  Data loaded successfully.
+2024-03-24 15:17:33,158 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:17:33,174 INFO:DVR created.
+2024-03-24 15:17:33,174 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 15:17:33,174 INFO:Creating signatures...
+2024-03-24 15:17:33,239 INFO:Signatures created.
+2024-03-24 15:17:33,240 INFO:Calculating sockpuppet distance...
+2024-03-24 15:17:43,180 INFO:Sockpuppet distance calculated       Corpus Corpus      value
+0     C00003  C00001  0.881857
+1     C00004  C00001  0.891932
+2     C00005  C00001  0.845421
+3     C00007  C00001  0.802142
+4     C00008  C00001  0.865685
+...      ...     ...       ...
+9881  C00074  C00079  0.799533
+9882  C00075  C00079  0.537062
+9883  C00076  C00079  0.789026
+9884  C00077  C00079  0.762404
+9885  C00078  C00079  0.560606
+
+[9886 rows x 3 columns]
+2024-03-24 15:17:43,184 INFO:E - N - D
+2024-03-24 15:19:27,952 INFO:1.Reading frequency data...
+2024-03-24 15:19:27,963 INFO:  Data loaded successfully.
+2024-03-24 15:19:27,963 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:19:27,978 INFO:DVR created.
+2024-03-24 15:19:27,978 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 15:19:27,978 INFO:Creating signatures...
+2024-03-24 15:19:28,044 INFO:Signatures created.
+2024-03-24 15:19:28,044 INFO:Calculating sockpuppet distance...
+2024-03-24 15:19:37,963 INFO:Sockpuppet distance calculated      Corpus Corpus   value
+0    C00001  C00001    0.0
+1    C00003  C00003    0.0
+2    C00004  C00004    0.0
+3    C00005  C00005    0.0
+4    C00007  C00007    0.0
+..      ...     ...    ...
+109  C00075  C00075    0.0
+110  C00076  C00076    0.0
+111  C00077  C00077    0.0
+112  C00078  C00078    0.0
+113  C00079  C00079    0.0
+
+[114 rows x 3 columns]
+2024-03-24 15:19:37,969 INFO:E - N - D
+2024-03-24 15:22:11,662 INFO:1.Reading frequency data...
+2024-03-24 15:22:11,673 INFO:  Data loaded successfully.
+2024-03-24 15:22:11,674 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:22:11,689 INFO:DVR created.
+2024-03-24 15:22:11,689 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 15:22:11,689 INFO:Creating signatures...
+2024-03-24 15:22:11,755 INFO:Signatures created.
+2024-03-24 15:22:11,755 INFO:Calculating sockpuppet distance...
+2024-03-24 15:22:21,657 INFO:Sockpuppet distance calculated      Corpus Corpus   value
+0    C00001  C00001    0.0
+1    C00003  C00003    0.0
+2    C00004  C00004    0.0
+3    C00005  C00005    0.0
+4    C00007  C00007    0.0
+..      ...     ...    ...
+109  C00075  C00075    0.0
+110  C00076  C00076    0.0
+111  C00077  C00077    0.0
+112  C00078  C00078    0.0
+113  C00079  C00079    0.0
+
+[114 rows x 3 columns]
+2024-03-24 15:22:21,662 INFO:E - N - D
+2024-03-24 15:29:36,005 INFO:1.Reading frequency data...
+2024-03-24 15:29:36,016 INFO:  Data loaded successfully.
+2024-03-24 15:29:36,017 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:29:36,030 INFO:DVR created.
+2024-03-24 15:29:36,030 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 15:29:36,030 INFO:Creating signatures...
+2024-03-24 15:29:36,094 INFO:Signatures created.
+2024-03-24 15:29:36,094 INFO:Calculating sockpuppet distance...
+2024-03-24 15:29:45,939 INFO:Sockpuppet distance calculated      Corpus Corpus   value
+0    C00001  C00001    0.0
+1    C00003  C00003    0.0
+2    C00004  C00004    0.0
+3    C00005  C00005    0.0
+4    C00007  C00007    0.0
+..      ...     ...    ...
+109  C00075  C00075    0.0
+110  C00076  C00076    0.0
+111  C00077  C00077    0.0
+112  C00078  C00078    0.0
+113  C00079  C00079    0.0
+
+[114 rows x 3 columns]
+2024-03-24 15:29:45,943 INFO:E - N - D
+2024-03-24 15:36:50,090 INFO:1.Reading frequency data...
+2024-03-24 15:36:50,106 INFO:  Data loaded successfully.
+2024-03-24 15:36:50,106 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:36:50,121 INFO:DVR created.
+2024-03-24 15:36:50,121 INFO:Epsilon calculated: 6.0968174612852094e-05
+2024-03-24 15:36:50,121 INFO:Creating signatures...
+2024-03-24 15:36:50,184 INFO:Signatures created.
+2024-03-24 15:36:50,184 INFO:Calculating sockpuppet distance...
+2024-03-24 15:37:00,184 INFO:Sockpuppet distance calculated      Corpus Corpus   value
+0    C00001  C00001    0.0
+1    C00003  C00003    0.0
+2    C00004  C00004    0.0
+3    C00005  C00005    0.0
+4    C00007  C00007    0.0
+..      ...     ...    ...
+109  C00075  C00075    0.0
+110  C00076  C00076    0.0
+111  C00077  C00077    0.0
+112  C00078  C00078    0.0
+113  C00079  C00079    0.0
+
+[114 rows x 3 columns]
+2024-03-24 15:37:00,184 INFO:E - N - D
+2024-03-24 15:38:44,972 INFO:1.Reading frequency data...
+2024-03-24 15:38:44,998 INFO:  Data loaded successfully.
+2024-03-24 15:38:44,998 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:38:45,080 INFO:DVR created.
+2024-03-24 15:38:45,080 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 15:38:45,080 INFO:Creating signatures...
+2024-03-24 15:38:46,800 INFO:Signatures created.
+2024-03-24 15:38:46,800 INFO:Calculating sockpuppet distance...
+2024-03-24 15:39:37,120 INFO:Sockpuppet distance calculated             Corpus     Corpus      value
+0            12458       12458  0.000000
+1       1133384726       12458  0.000000
+2          5415242     5415242  0.000000
+3          6833142     5415242  0.070613
+4          7844442     5415242  0.058701
+...            ...         ...       ...
+663602  3024239239  3058416716  0.131452
+663603  3028724220  3058416716  0.132425
+663604  3041746902  3058416716  0.182162
+663605  3052974534  3058416716  0.163799
+663606  3058416716  3058416716  0.000000
+
+[663607 rows x 3 columns]
+2024-03-24 15:39:37,219 INFO:E - N - D
+2024-03-24 15:42:54,184 INFO:1.Reading frequency data...
+2024-03-24 15:42:54,211 INFO:  Data loaded successfully.
+2024-03-24 15:42:54,212 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:42:54,298 INFO:DVR created.
+2024-03-24 15:42:54,298 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 15:42:54,298 INFO:Creating signatures...
+2024-03-24 15:42:55,851 INFO:Signatures created.
+2024-03-24 15:42:55,851 INFO:Calculating sockpuppet distance...
+2024-03-24 15:43:47,433 INFO:Sockpuppet distance calculated             Corpus     Corpus      value
+0            12458       12458  0.000000
+1       1133384726       12458  0.000000
+2          5415242     5415242  0.000000
+3          6833142     5415242  0.070613
+4          7844442     5415242  0.058701
+...            ...         ...       ...
+663602  3024239239  3058416716  0.131452
+663603  3028724220  3058416716  0.132425
+663604  3041746902  3058416716  0.182162
+663605  3052974534  3058416716  0.163799
+663606  3058416716  3058416716  0.000000
+
+[663607 rows x 3 columns]
+2024-03-24 15:43:47,528 INFO:E - N - D
+2024-03-24 15:51:17,920 INFO:1.Reading frequency data...
+2024-03-24 15:51:17,948 INFO:  Data loaded successfully.
+2024-03-24 15:51:17,948 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:51:18,034 INFO:DVR created.
+2024-03-24 15:51:18,034 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 15:51:18,034 INFO:Creating signatures...
+2024-03-24 15:51:19,476 INFO:Signatures created.
+2024-03-24 15:51:19,476 INFO:Calculating sockpuppet distance...
+2024-03-24 15:52:10,952 INFO:Sockpuppet distance calculated             Corpus     Corpus      value
+0            12458       12458  0.000000
+1       1133384726       12458  0.000000
+2          5415242     5415242  0.000000
+3          6833142     5415242  0.070613
+4          7844442     5415242  0.058701
+...            ...         ...       ...
+239531  3028724220  3028724220  0.000000
+239532  3030258899  3030258899  0.000000
+239533  3041746902  3041746902  0.000000
+239534  3052974534  3052974534  0.000000
+239535  3058416716  3058416716  0.000000
+
+[239536 rows x 3 columns]
+2024-03-24 15:52:10,987 INFO:E - N - D
+2024-03-24 15:53:27,872 INFO:1.Reading frequency data...
+2024-03-24 15:53:27,898 INFO:  Data loaded successfully.
+2024-03-24 15:53:27,898 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:53:27,983 INFO:DVR created.
+2024-03-24 15:53:27,983 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 15:53:27,983 INFO:Creating signatures...
+2024-03-24 15:53:29,559 INFO:Signatures created.
+2024-03-24 15:53:29,559 INFO:Calculating sockpuppet distance...
+2024-03-24 15:54:19,462 INFO:Sockpuppet distance calculated           Corpus     Corpus   value
+0          12458       12458    0.0
+1     1133384726       12458    0.0
+2        5415242     5415242    0.0
+3     1133414749     5415242    0.0
+4        6833142     6833142    0.0
+...          ...         ...    ...
+1321  3028724220  3028724220    0.0
+1322  3030258899  3030258899    0.0
+1323  3041746902  3041746902    0.0
+1324  3052974534  3052974534    0.0
+1325  3058416716  3058416716    0.0
+
+[1326 rows x 3 columns]
+2024-03-24 15:54:19,464 INFO:E - N - D
+2024-03-24 15:54:48,871 INFO:1.Reading frequency data...
+2024-03-24 15:54:48,899 INFO:  Data loaded successfully.
+2024-03-24 15:54:48,899 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:54:48,985 INFO:DVR created.
+2024-03-24 15:54:48,985 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 15:54:48,986 INFO:Creating signatures...
+2024-03-24 15:54:50,527 INFO:Signatures created.
+2024-03-24 15:54:50,527 INFO:Calculating sockpuppet distance...
+2024-03-24 15:56:02,107 INFO:Sockpuppet distance calculated           Corpus     Corpus   value
+0          12458       12458    0.0
+1     1133384726       12458    0.0
+2        5415242     5415242    0.0
+3     1133414749     5415242    0.0
+4        6833142     6833142    0.0
+...          ...         ...    ...
+1323  3028724220  3028724220    0.0
+1324  3030258899  3030258899    0.0
+1325  3041746902  3041746902    0.0
+1326  3052974534  3052974534    0.0
+1327  3058416716  3058416716    0.0
+
+[1328 rows x 3 columns]
+2024-03-24 15:56:02,107 INFO:E - N - D
+2024-03-24 15:57:36,126 INFO:1.Reading frequency data...
+2024-03-24 15:57:36,154 INFO:  Data loaded successfully.
+2024-03-24 15:57:36,155 INFO:2. Creating DVR from the corpus...
+2024-03-24 15:57:36,248 INFO:DVR created.
+2024-03-24 15:57:36,249 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 15:57:36,249 INFO:Creating signatures...
+2024-03-24 15:57:37,851 INFO:Signatures created.
+2024-03-24 15:57:37,851 INFO:Calculating sockpuppet distance...
+2024-03-24 15:58:33,239 INFO:Sockpuppet distance calculated            Corpus     Corpus   value
+0           12458       12458    0.0
+1      1133384726       12458    0.0
+2         5415242     5415242    0.0
+3      1133414749     5415242    0.0
+4         6833142     6833142    0.0
+...           ...         ...    ...
+24784  3028724220  3028724220    0.0
+24785  3030258899  3030258899    0.0
+24786  3041746902  3041746902    0.0
+24787  3052974534  3052974534    0.0
+24788  3058416716  3058416716    0.0
+
+[24789 rows x 3 columns]
+2024-03-24 15:58:33,254 INFO:E - N - D
+2024-03-24 16:01:03,463 INFO:1.Reading frequency data...
+2024-03-24 16:01:03,492 INFO:  Data loaded successfully.
+2024-03-24 16:01:03,492 INFO:2. Creating DVR from the corpus...
+2024-03-24 16:01:03,578 INFO:DVR created.
+2024-03-24 16:01:03,578 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 16:01:03,578 INFO:Creating signatures...
+2024-03-24 16:01:04,985 INFO:Signatures created.
+2024-03-24 16:01:04,986 INFO:Calculating sockpuppet distance...
+2024-03-24 16:02:00,000 INFO:Sockpuppet distance calculated           Corpus     Corpus   value
+0          12458       12458    0.0
+1     1133384726       12458    0.0
+2        5415242     5415242    0.0
+3     1133414749     5415242    0.0
+4        6833142     6833142    0.0
+...          ...         ...    ...
+2795  3028724220  3028724220    0.0
+2796  3030258899  3030258899    0.0
+2797  3041746902  3041746902    0.0
+2798  3052974534  3052974534    0.0
+2799  3058416716  3058416716    0.0
+
+[2800 rows x 3 columns]
+2024-03-24 16:02:00,016 INFO:E - N - D
+2024-03-24 16:02:26,714 INFO:1.Reading frequency data...
+2024-03-24 16:02:26,764 INFO:  Data loaded successfully.
+2024-03-24 16:02:26,764 INFO:2. Creating DVR from the corpus...
+2024-03-24 16:02:26,886 INFO:DVR created.
+2024-03-24 16:02:26,886 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 16:02:26,886 INFO:Creating signatures...
+2024-03-24 16:02:28,516 INFO:Signatures created.
+2024-03-24 16:02:28,516 INFO:Calculating sockpuppet distance...
+2024-03-24 16:03:24,410 INFO:Sockpuppet distance calculated           Corpus     Corpus   value
+0          12458       12458    0.0
+1     1133384726       12458    0.0
+2        5415242     5415242    0.0
+3     1133414749     5415242    0.0
+4        6833142     6833142    0.0
+...          ...         ...    ...
+1447  3028724220  3028724220    0.0
+1448  3030258899  3030258899    0.0
+1449  3041746902  3041746902    0.0
+1450  3052974534  3052974534    0.0
+1451  3058416716  3058416716    0.0
+
+[1452 rows x 3 columns]
+2024-03-24 16:03:24,419 INFO:E - N - D
+2024-03-24 16:08:30,357 INFO:1.Reading frequency data...
+2024-03-24 16:08:30,383 INFO:  Data loaded successfully.
+2024-03-24 16:08:30,383 INFO:2. Creating DVR from the corpus...
+2024-03-24 16:08:30,470 INFO:DVR created.
+2024-03-24 16:08:30,470 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 16:08:30,470 INFO:Creating signatures...
+2024-03-24 16:08:32,025 INFO:Signatures created.
+2024-03-24 16:08:32,025 INFO:Calculating sockpuppet distance...
+2024-03-24 16:09:22,465 INFO:Sockpuppet distance calculated           Corpus     Corpus   value
+0          12458       12458    0.0
+1     1133384726       12458    0.0
+2        5415242     5415242    0.0
+3     1133414749     5415242    0.0
+4        6833142     6833142    0.0
+...          ...         ...    ...
+1447  3028724220  3028724220    0.0
+1448  3030258899  3030258899    0.0
+1449  3041746902  3041746902    0.0
+1450  3052974534  3052974534    0.0
+1451  3058416716  3058416716    0.0
+
+[1452 rows x 3 columns]
+2024-03-24 16:09:22,473 INFO:E - N - D
+2024-03-24 16:10:28,582 INFO:1.Reading frequency data...
+2024-03-24 16:10:28,616 INFO:  Data loaded successfully.
+2024-03-24 16:10:28,616 INFO:2. Creating DVR from the corpus...
+2024-03-24 16:10:28,721 INFO:DVR created.
+2024-03-24 16:10:28,721 INFO:Epsilon calculated: 2.226179875333927e-05
+2024-03-24 16:10:28,721 INFO:Creating signatures...
+2024-03-24 16:10:30,533 INFO:Signatures created.
+2024-03-24 16:10:30,533 INFO:Calculating sockpuppet distance...
+2024-03-24 16:11:44,031 INFO:Sockpuppet distance calculated           Corpus     Corpus   value
+0          12458       12458    0.0
+1     1133384726       12458    0.0
+2        5415242     5415242    0.0
+3     1133414749     5415242    0.0
+4        6833142     6833142    0.0
+...          ...         ...    ...
+1447  3028724220  3028724220    0.0
+1448  3030258899  3030258899    0.0
+1449  3041746902  3041746902    0.0
+1450  3052974534  3052974534    0.0
+1451  3058416716  3058416716    0.0
+
+[1452 rows x 3 columns]
+2024-03-24 16:11:44,047 INFO:E - N - D

@@ -199,154 +199,125 @@ class Corpus:
         res = self._signature_matrix(sig_length, distances_df)
         return res
 
-
-def calculate_block_distance(args):
-    block, matrix2, start_row = args
-    print(f"Processing block starting at row {start_row}")
-    distances = cdist(block, matrix2, metric="cityblock")
-    print(f"Finished processing block starting at row {start_row}")
-    return start_row, distances
-
-def sockpuppet_distance(corpus1, corpus2, res='table', heuristic=True):
-    matrix1 = deepcopy(corpus1.signature_matrix.matrix)
-    matrix2 = deepcopy(corpus2.signature_matrix.matrix)
-
-    if heuristic:
-        matrix1[matrix1 > 0] += 1
-        matrix1[matrix1 < 0] -= 1
-        matrix2[matrix2 > 0] += 1
-        matrix2[matrix2 < 0] -= 1
-
-    matrix1 = matrix1[:, ~np.all(matrix1 == 0, axis=0)]
-    matrix2 = matrix2[:, ~np.all(matrix2 == 0, axis=0)]
-
-    block_size = 1000  
-    total_blocks = int(np.ceil(matrix1.shape[0] / block_size))
-    print(f"Total blocks to process: {total_blocks}")
-
-    cdist_ = np.zeros((matrix1.shape[0], matrix2.shape[0]))
-    with ProcessPoolExecutor(max_workers=4) as executor:
-        futures = []
-        for start_row in range(0, matrix1.shape[0], block_size):
-            block = matrix1[start_row:start_row + block_size]
-            future = executor.submit(calculate_block_distance, (block, matrix2, start_row))
-            futures.append(future)
-            print(f"1 {future} " )
-            print(f"Created process for block starting at row {start_row}")
-
-        for future in futures:
-            start_row, distances = future.result()
-            cdist_[start_row:start_row + distances.shape[0], :] = distances
-            print(f"Collected results for block starting at row {start_row}")
-
-    c1n = getattr(corpus1, "name", "Corpus 1")
-    c2n = getattr(corpus2, "name", "Corpus 2")
-    df = pd.DataFrame(cdist_, index=corpus1.document_cat.categories, columns=corpus2.document_cat.categories)
-
-    if res == "matrix":
-        df /= df.values.max()
-        df = df + df.T
-        df = df.pivot(index=c1n, columns=c2n, values="value").fillna(0)
-    else:
-        df = df.melt(ignore_index=False, var_name=c2n).dropna().reset_index()
-        df["value"] /= df["value"].max()
-
-    return df
-
-# def calculate_distances(block, matrix2, start_index, threshold=0.4):
-#     distances = cdist(block, matrix2, metric='cityblock')
+# def calculate_block_distance(args):
+#     block, matrix2, start_row, threshold = args
+#     distances = cdist(block, matrix2, metric="cityblock")
+#     # Keep only distances less than the threshold
 #     filtered_indices = np.where(distances < threshold)
-#     filtered_distances = distances[filtered_indices]
-#     # Adjust the indices to match the original matrix
-#     filtered_row_indices = filtered_indices[0] + start_index
-#     filtered_col_indices = filtered_indices[1]
-    
-#     # Return both the indices and the corresponding distances
-#     return (filtered_row_indices, filtered_col_indices), filtered_distances
+#     distances[filtered_indices] = np.nan  # Mark filtered distances as NaN
+#     return start_row, distances
 
-
-# def sockpuppet_distance(corpus1, corpus2, res='table', heuristic=True, threshold=0.4):
-#     matrix1 = corpus1.signature_matrix.matrix
-#     matrix2 = corpus2.signature_matrix.matrix
+# def sockpuppet_distance(corpus1, corpus2, threshold=0.4, res='table', heuristic=True):
+#     matrix1 = deepcopy(corpus1.signature_matrix.matrix)
+#     matrix2 = deepcopy(corpus2.signature_matrix.matrix)
 
 #     if heuristic:
-#         matrix1 = np.where(matrix1 > 0, matrix1 + 1, matrix1)
-#         matrix2 = np.where(matrix2 > 0, matrix2 + 1, matrix2)
+#         matrix1[matrix1 > 0] += 1
+#         matrix1[matrix1 < 0] -= 1
+#         matrix2[matrix2 > 0] += 1
+#         matrix2[matrix2 < 0] -= 1
 
 #     matrix1 = matrix1[:, ~np.all(matrix1 == 0, axis=0)]
 #     matrix2 = matrix2[:, ~np.all(matrix2 == 0, axis=0)]
 
-#     block_size = 2000  # Adjust based on your system's capabilities
+#     block_size = 1000  
 #     total_blocks = int(np.ceil(matrix1.shape[0] / block_size))
-
 #     print(f"Total blocks to process: {total_blocks}")
 
-#     spd_results = []
-#     with ThreadPoolExecutor(max_workers=4) as executor:  # Adjust the number of workers based on your system
+#     cdist_ = np.zeros((matrix1.shape[0], matrix2.shape[0]))
+
+#     with ProcessPoolExecutor(max_workers=4) as executor:
 #         futures = []
-#         for start in tqdm(range(0, matrix1.shape[0], block_size), total=total_blocks, desc="Processing blocks"):
-#             block = matrix1[start:start + block_size]
-#             futures.append(executor.submit(calculate_distances, block, matrix2, start, threshold))
+#         for start_row in range(0, matrix1.shape[0], block_size):
+#             block = matrix1[start_row:start_row + block_size]
+#             future = executor.submit(calculate_block_distance, (block, matrix2, start_row, threshold))
+#             futures.append(future)
 
-#         for future in tqdm(as_completed(futures), total=total_blocks, desc="Collecting results"):
-#             indices, distances = future.result()
-#             row_indices, col_indices = indices
-#             for i in range(len(distances)):
-#                 spd_results.append({
-#                     corpus1.name: corpus1.document_cat.categories[row_indices[i]],
-#                     corpus2.name: corpus2.document_cat.categories[col_indices[i]],
-#                     'value': distances[i]
-#                 })
+#         for future in futures:
+#             start_row, distances = future.result()
+#             cdist_[start_row:start_row + distances.shape[0], :] = distances
 
-#     spd_df = pd.DataFrame(spd_results)
+#     if res == "matrix":
+#         df = pd.DataFrame(cdist_, index=corpus1.document_cat.categories, columns=corpus2.document_cat.categories)
+#         if heuristic:  # Optional symmetry step
+#             df = df + df.T
+#         df /= df.max().max()
+#     else:
+#         df = pd.DataFrame(cdist_).stack().reset_index()
+#         df.columns = ['row', 'col', 'value']
+#         df = df[df['value'] < threshold]
 
-#     return spd_df
+#     return df
 
-# def calculate_distances(block, matrix2, start_index, threshold=0.4):
-#     distances = cdist(block, matrix2, metric='cityblock')
-#     # Filter the distances and get the indices for those less than the threshold
-#     row_indices, col_indices = np.where(distances < threshold)
-#     filtered_distances = distances[row_indices, col_indices]
-#     # Adjust row indices to match their original position in the full matrix
-#     row_indices += start_index
-#     return row_indices, col_indices, filtered_distances
 
-# def sockpuppet_distance(corpus1, corpus2, threshold=0.4):
-#     matrix1 = corpus1.signature_matrix.matrix
-#     matrix2 = corpus2.signature_matrix.matrix
 
-#     # Ensure the matrices are filtered as per heuristic, if needed
-#     matrix1 = np.where(matrix1 > 0, matrix1 + 1, matrix1)
-#     matrix2 = np.where(matrix2 > 0, matrix2 + 1, matrix2)
 
-#     matrix1 = matrix1[:, ~np.all(matrix1 == 0, axis=0)]
-#     matrix2 = matrix2[:, ~np.all(matrix2 == 0, axis=0)]
+def calculate_block_distance(block, matrix2, metric="cityblock"):
+    return cdist(block, matrix2, metric=metric)
 
-#     block_size = 500
-#     total_blocks = int(np.ceil(matrix1.shape[0] / block_size))
+def sockpuppet_distance(
+    corpus1,
+    corpus2,
+    res: Literal["table", "matrix"] = "table",
+    heuristic: bool = True,
+    threshold = 0.02
+):
+    # Preprocess matrices
+    matrices = []
+    for corpus in [corpus1, corpus2]:
+        matrix = deepcopy(corpus.signature_matrix.matrix)
+        matrix = matrix[:, ~np.all(matrix == 0, axis=0)]
+        if heuristic:
+            matrix[matrix > 0] += 1
+            matrix[matrix < 0] -= 1
+        matrices.append(matrix)
 
-#     results = []
-#     with ProcessPoolExecutor() as executor:
-#         futures = []
-#         for start in range(0, matrix1.shape[0], block_size):
-#             block = matrix1[start:start + block_size]
-#             futures.append(executor.submit(calculate_distances, block, matrix2, start, threshold))
+    matrix1, matrix2 = matrices
+    block_size = 700
+    total_rows = matrix1.shape[0]
 
-#         for future in as_completed(futures):
-#             row_indices, col_indices, distances = future.result()
-#             results.extend(zip(row_indices, col_indices, distances))
+    # Calculate max value for filtering threshold before normalization
+    sample_distance = cdist(matrix1[:1], matrix2, metric="cityblock")
+    max_value = sample_distance.max()
+    raw_threshold = threshold * max_value
 
-#     # Create a DataFrame from the results
-#     df = pd.DataFrame(results, columns=['row_index', 'col_index', 'distance'])
+    cdist_ = np.zeros((total_rows, matrix2.shape[0]))
+    
+    total_blocks = int(np.ceil(total_rows / block_size))
+    print(f"Total blocks to process: {total_blocks}")
 
-#     # Map indices to categories
-#     df['document'] = df['row_index'].apply(lambda x: corpus1.document_cat.categories[x])
-#     df['element'] = df['col_index'].apply(lambda x: corpus2.document_cat.categories[x])
+    with ProcessPoolExecutor(max_workers=4) as executor:
+        futures = []
+        for start_row in range(0, total_rows, block_size):
+            end_row = min(start_row + block_size, total_rows)
+            block = matrix1[start_row:end_row]
+            future = executor.submit(calculate_block_distance, block, matrix2)
+            futures.append((future, start_row, end_row))
 
-#     # Drop the numerical indices as they are no longer needed
-#     df = df.drop(['row_index', 'col_index'], axis=1)
+        for future, start_row, end_row in futures:
+            block_distances = future.result()
+            if corpus1 is corpus2:
+                # Set diagonal to 0 if comparing the same corpus
+                np.fill_diagonal(block_distances[max(0, start_row - end_row):], 0)
+            block_distances[block_distances > raw_threshold] = np.nan
+            cdist_[start_row:end_row, :] = block_distances
 
-#     return df.pivot(index='document', columns='element', values='distance')
+    # Normalization
+    cdist_ /= max_value
+
+    # Construct DataFrame
+    c1n = getattr(corpus2, "name", "Corpus 1")
+    c2n = getattr(corpus1, "name", "Corpus 2")
+    df = pd.DataFrame(cdist_, index=corpus1.document_cat.categories, columns=corpus2.document_cat.categories)
+
+    if res == "table":
+        if c1n == c2n:
+            c2n = c1n + " "
+        df = df.rename_axis(index=c1n).melt(ignore_index=False, var_name=c2n).dropna().reset_index()
+    elif res == "matrix":
+        df = df.fillna(0) + df.T
+
+    return df
 
 
 def PCA(sockpuppet_matrix, n_components: int = 2):
